@@ -2,6 +2,7 @@ package com.drifter.spring6restclient.client;
 
 
 import com.drifter.spring6restclient.model.BeerDTO;
+import com.drifter.spring6restclient.model.BeerDTOPageImpl;
 import com.drifter.spring6restclient.model.BeerStyle;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
@@ -55,7 +56,10 @@ public class BeerClientImpl implements BeerClient {
             uriComponentsBuilder.queryParam("pageSize", pageSize);
         }
 
-        return null;
+        return restClient.get()
+                .uri(uriComponentsBuilder.toUriString())
+                .retrieve()
+                .body(BeerDTOPageImpl.class);
     }
 
     @Override
