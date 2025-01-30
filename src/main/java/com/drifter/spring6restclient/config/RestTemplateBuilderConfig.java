@@ -1,4 +1,4 @@
-package guru.springframework.spring6restclient.config;
+package com.drifter.spring6restclient.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer;
@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.client.OAuth2AuthorizedClientManager;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProviderBuilder;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.web.client.RestClient;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 
 /**
@@ -34,6 +35,10 @@ public class RestTemplateBuilderConfig {
         return authorizedClientManager;
     }
 
+    @Bean
+    public RestClient.Builder restClientBuilder(RestTemplateBuilder restTemplateBuilder) {
+        return RestClient.builder(restTemplateBuilder.build());
+    }
 
     @Bean
     RestTemplateBuilder restTemplateBuilder(RestTemplateBuilderConfigurer configurer,

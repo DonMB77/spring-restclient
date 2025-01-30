@@ -1,4 +1,4 @@
-package guru.springframework.spring6restclient.config;
+package com.drifter.spring6restclient.config;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;

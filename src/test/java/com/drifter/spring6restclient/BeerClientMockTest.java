@@ -1,14 +1,14 @@
-package guru.springframework.spring6restclient;
+package com.drifter.spring6restclient;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import guru.springframework.spring6restclient.client.BeerClient;
-import guru.springframework.spring6restclient.client.BeerClientImpl;
-import guru.springframework.spring6restclient.config.OAuthClientInterceptor;
-import guru.springframework.spring6restclient.config.RestTemplateBuilderConfig;
-import guru.springframework.spring6restclient.model.BeerDTO;
-import guru.springframework.spring6restclient.model.BeerDTOPageImpl;
-import guru.springframework.spring6restclient.model.BeerStyle;
+import com.drifter.spring6restclient.client.BeerClient;
+import com.drifter.spring6restclient.client.BeerClientImpl;
+import com.drifter.spring6restclient.config.OAuthClientInterceptor;
+import com.drifter.spring6restclient.config.RestTemplateBuilderConfig;
+import com.drifter.spring6restclient.model.BeerDTO;
+import com.drifter.spring6restclient.model.BeerDTOPageImpl;
+import com.drifter.spring6restclient.model.BeerStyle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

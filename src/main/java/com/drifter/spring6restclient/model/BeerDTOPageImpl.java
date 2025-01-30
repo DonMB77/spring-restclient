@@ -1,4 +1,4 @@
-package guru.springframework.spring6restclient.model;
+package com.drifter.spring6restclient.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -13,21 +13,21 @@ import java.util.List;
  * Created by jt, Spring Framework Guru.
  */
 @JsonIgnoreProperties(ignoreUnknown = true, value = "pageable")
-public class BeerDTOPageImpl<BeerDTO> extends PageImpl<guru.springframework.spring6restclient.model.BeerDTO> {
+public class BeerDTOPageImpl<BeerDTO> extends PageImpl<com.drifter.spring6restclient.model.BeerDTO> {
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-    public BeerDTOPageImpl(@JsonProperty("content")  List<guru.springframework.spring6restclient.model.BeerDTO> content,
+    public BeerDTOPageImpl(@JsonProperty("content")  List<com.drifter.spring6restclient.model.BeerDTO> content,
                            @JsonProperty("number") int page,
                            @JsonProperty("size") int size,
                            @JsonProperty("totalElements") long total) {
         super(content, PageRequest.of(page, size), total);
     }
 
-    public BeerDTOPageImpl(List<guru.springframework.spring6restclient.model.BeerDTO> content, Pageable pageable, long total) {
+    public BeerDTOPageImpl(List<com.drifter.spring6restclient.model.BeerDTO> content, Pageable pageable, long total) {
         super(content, pageable, total);
     }
 
-    public BeerDTOPageImpl(List<guru.springframework.spring6restclient.model.BeerDTO> content) {
+    public BeerDTOPageImpl(List<com.drifter.spring6restclient.model.BeerDTO> content) {
         super(content);
     }
 }

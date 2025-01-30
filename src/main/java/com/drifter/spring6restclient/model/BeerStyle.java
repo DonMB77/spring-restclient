@@ -1,4 +1,4 @@
-package guru.springframework.spring6restclient.model;
+package com.drifter.spring6restclient.model;
 
 /**
  * Created by jt, Spring Framework Guru.

@@ -1,9 +1,9 @@
-package guru.springframework.spring6restclient;
+package com.drifter.spring6restclient;
 
 
-import guru.springframework.spring6restclient.client.BeerClientImpl;
-import guru.springframework.spring6restclient.model.BeerDTO;
-import guru.springframework.spring6restclient.model.BeerStyle;
+import com.drifter.spring6restclient.client.BeerClientImpl;
+import com.drifter.spring6restclient.model.BeerDTO;
+import com.drifter.spring6restclient.model.BeerStyle;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

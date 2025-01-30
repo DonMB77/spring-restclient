@@ -1,7 +1,7 @@
-package guru.springframework.spring6restclient.client;
+package com.drifter.spring6restclient.client;
 
-import guru.springframework.spring6restclient.model.BeerDTO;
-import guru.springframework.spring6restclient.model.BeerStyle;
+import com.drifter.spring6restclient.model.BeerDTO;
+import com.drifter.spring6restclient.model.BeerStyle;
 import org.springframework.data.domain.Page;
 
 import java.util.UUID;

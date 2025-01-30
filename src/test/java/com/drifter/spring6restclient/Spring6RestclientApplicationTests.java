@@ -1,4 +1,4 @@
-package guru.springframework.spring6restclient;
+package com.drifter.spring6restclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
