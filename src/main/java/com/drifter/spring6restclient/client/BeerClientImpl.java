@@ -8,6 +8,7 @@ import lombok.val;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.UUID;
 
@@ -25,11 +26,35 @@ public class BeerClientImpl implements BeerClient {
 
     @Override
     public Page<BeerDTO> listBeers() {
-        return null;
+        return listBeers(null, null, null, null, null);
     }
 
     @Override
     public Page<BeerDTO> listBeers(String beerName, BeerStyle beerStyle, Boolean showInventory, Integer pageNumber, Integer pageSize) {
+        RestClient restClient = restClientBuilder.build();
+
+        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromPath(GET_BEER_PATH);
+
+        if (beerName != null) {
+            uriComponentsBuilder.queryParam("beerName", beerName);
+        }
+
+        if (beerStyle != null) {
+            uriComponentsBuilder.queryParam("beerStyle", beerStyle);
+        }
+
+        if (showInventory != null) {
+            uriComponentsBuilder.queryParam("showInventory", showInventory);
+        }
+
+        if (pageNumber != null) {
+            uriComponentsBuilder.queryParam("pageNumber", pageNumber);
+        }
+
+        if (pageSize != null) {
+            uriComponentsBuilder.queryParam("pageSize", pageSize);
+        }
+
         return null;
     }
 
